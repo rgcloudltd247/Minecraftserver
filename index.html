@@ -9,12 +9,13 @@
 <body>
     <header>
         <nav>
-            <div class="https://cdn.discordapp.com/attachments/1326574563500363808/1339076176332980224/8248a461-4f5e-4944-bdf8-bed540dc5470.jpg?ex=67ad675f&is=67ac15df&hm=22f0d8c179ba8980bfa615cc4c3879e5d4028a40df7bb2303a0001917243baf4&">DARK BLOOD CARNAGE SMP</div>
+       
+            <div class="#">DARK BLOOD CARNAGE SMP</div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#modes">Game Modes</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="server.html">Server Status</a></li>
                 <li><a href="#status">Server Status</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="links.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -38,37 +39,6 @@
                 <p>Explore, mine, and build your own empire.</p>
             </div>
     </section>
-
-    <section id="status" class="status">
-        <h2 class="slide-in">Server Status</h2>
-        <p id="server-status" class="fade-in">Checking...</p>
-        <script>
-            async function checkServerStatus() {
-                const serverIP = "play.rgcloudlimited.site:19132";
-                let statusElement = document.getElementById("server-status");
-                statusElement.innerHTML = "⏳ Checking...";
-                try {
-                    let response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
-                    let data = await response.json();
-                    if (data.online) {
-                        statusElement.innerHTML = `🟢 Online - Players: ${data.players.online}/${data.players.max}`;
-                    } else {
-                        statusElement.innerHTML = "🔴 Offline";
-                    }
-                } catch {
-                    statusElement.innerHTML = "⚠️ Unable to check server status";
-                }
-            }
-            checkServerStatus();
-        </script>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2 class="slide-in">Contact Us</h2>
-        <p>Email: rgcloudslimited.rgsmt@gmail.com</p>
-        <p>Follow us on<button><a href="https://discord.gg/MTqr8beNM5">Discord</a></boutton> |
-            <button><a href="https://youtube.com/@rgcloudltd?si=LUsSByN0XDM8UOSp">YOUTUBE</a></p>
-    </section></button>
    
     <footer>
         <p>&copy; 2025 Minecraft DARK BLOOCD CARNAGE SMP All rights reserved.</p>
